@@ -1,0 +1,220 @@
+.chooseimage-container {
+  width: 100%;
+  height: 100%;
+  padding: 0rem 3rem;
+  box-sizing: border-box;
+}
+.chooseimage-outer p {
+  font-size: 30px;
+  width: 100%;
+}
+.chooseimage-outer > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.chooseimage-div {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.chooseimage-div > p {
+  font-size: 35px;
+  margin: 0;
+  font-weight: bolder;
+  width: 100%;
+}
+.chooseimage-div > span {
+  color: gray;
+}
+
+.add-avatar-div {
+  margin-top: 20px;
+  font-weight: bolder;
+  /* outline: 1px solid black; */
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  /* height: 500px; */
+}
+.add-avatar-div > span,
+.add-location-div > span {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.choose-photo-div {
+  display: flex;
+  gap: 60px;
+}
+.camera-icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 130px;
+  margin: 0;
+  border: 2px dotted #888888b0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.camera-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.avatar-upload-label {
+  outline: 1px solid #888888b0;
+  padding: 6px 13px;
+  display: flex;
+  margin-right: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.avatar-upload-label.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.avatar-upload-input {
+  display: none;
+}
+.choose-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.choose-image-text {
+  color: #888;
+  font-size: 14px;
+}
+.add-location-div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-location-div input {
+  border-radius: 6px;
+  border: none;
+  border-bottom: 1px solid #888;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+.add-location-div input:focus {
+  /* border: none; */
+  border: 1px solid #888;
+}
+.add-location-div input::placeholder {
+  color: #888;
+  font-weight: bold;
+}
+
+.next {
+  margin-top: 10px;
+}
+.next button {
+  padding: 0;
+  height: 35px;
+  width: 150px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.remove-image-btn {
+  background-color: transparent;
+  border: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .chooseimage-div {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .chooseimage-container {
+    padding: 0rem 2rem;
+  }
+  .chooseimage-div {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .chooseimage-div {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .chooseimage-div {
+    width: 80%;
+  }
+  .chooseimage-container {
+    padding: 0rem 1rem;
+  }
+  .chooseimage-div > p {
+    font-size: 25px;
+  }
+  .chooseimage-div span {
+    font-size: 14px;
+  }
+  .choose-photo-div {
+    gap: 40px;
+  }
+  .camera-icon {
+    height: 110px;
+    width: 110px;
+  }
+  .avatar-upload-label {
+    padding: 6px 13px;
+    font-size: 14px;
+  }
+  .add-location-div input {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .choose-image-div {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .chooseimage-div {
+    width: 100%;
+  }
+  .chooseimage-container {
+    padding: 0rem 1rem;
+  }
+  .chooseimage-div > p {
+    font-size: 20px;
+  }
+  .chooseimage-div span {
+    font-size: 12px;
+  }
+  .choose-photo-div {
+    gap: 20px;
+  }
+  .camera-icon {
+    height: 100px;
+    width: 100px;
+  }
+  .avatar-upload-label {
+    padding: 6px 13px;
+    font-size: 12px;
+  }
+  .add-location-div input {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .choose-image-div {
+    font-size: 12px;
+  }
+}

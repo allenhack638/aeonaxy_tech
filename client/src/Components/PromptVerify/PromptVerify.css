@@ -1,0 +1,14 @@
+.maximum-attemps {
+  color: red !important;
+}
+.verify {
+  margin: auto;
+}
+.verify-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}

@@ -1,0 +1,93 @@
+.select-interest {
+  text-align: center;
+}
+.select-interest-div {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 20px;
+  margin: 50px 0;
+}
+.selectable-card {
+  border-radius: 8px;
+  flex: 1;
+  border: 1px solid #888;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.selectable-card input[type="checkbox"] {
+  color: black;
+  cursor: pointer;
+}
+.selectable-card:hover {
+  transform: scale(1.05);
+}
+.selectable-card h3 {
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.selectable-card:hover {
+  border-color: #999;
+}
+.selectable-card.selected {
+  outline: 2px solid black;
+  border-color: #000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.selectable-card input {
+  outline: none;
+  border: none;
+}
+.finish {
+  margin-top: 30px;
+}
+.selectable-card img {
+  width: 100%;
+  height: 130px;
+  max-width: 200px;
+}
+.finish {
+  display: flex;
+  justify-content: center;
+}
+.select-mulitple-message {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.select-mulitple-message.visible {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 850px) {
+  .selectable-card h3 {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .select-interest-div {
+    margin: 25px 0;
+  }
+  .finish {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .select-interest-div {
+    margin: 25px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .select-interest-div {
+    flex-direction: column;
+    margin: auto;
+  }
+  .selectable-card img {
+    width: 100%;
+  }
+  .selectable-card {
+    overflow: hidden;
+    padding-bottom: 10px;
+    width: auto;
+  }
+}

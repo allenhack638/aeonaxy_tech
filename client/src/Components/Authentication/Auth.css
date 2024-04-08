@@ -1,0 +1,40 @@
+.signup-div {
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* outline: 2px solid black; */
+}
+.signup-div form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.signup-div > p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1200px) {
+  .signup-div {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .signup-div {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .signup-div {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .signup-div > p {
+    font-size: 20px;
+  }
+}

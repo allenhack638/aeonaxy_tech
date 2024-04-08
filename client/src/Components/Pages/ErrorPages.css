@@ -1,0 +1,91 @@
+.unauth {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px !important;
+}
+.unauth h2 {
+  margin: 0;
+  font-size: 35px;
+}
+.unauth-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.unauth p {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 550px) {
+  .unauth h2 {
+    font-size: 25px;
+  }
+  .unauth p {
+    font-size: 16px;
+  }
+  .unauth {
+    gap: 25px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .unauth h2 {
+    font-size: 20px;
+  }
+  .unauth p {
+    font-size: 14px;
+  }
+}
+
+/* Main container styles */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* Content styles */
+.not-found-content {
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.not-found-home-link {
+  display: inline-block;
+  background-color: #000; /* Changed to black */
+  color: #fff; /* Keeps text white for contrast */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.not-found-home-link:hover {
+  background-color: #333; /* A lighter shade of black (dark gray) for hover */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .not-found-title {
+    font-size: 4rem;
+  }
+
+  .not-found-text {
+    font-size: 1.2rem;
+  }
+}
