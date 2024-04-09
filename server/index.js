@@ -288,7 +288,6 @@ app.get("/api/send-mail", authoriseUser, async (req, res) => {
   }
 });
 
-const server = app.listen(port, "127.0.0.1", () => {
-  const { address, port } = server.address();
-  console.log(`Server listening on http://${address}:${port}`);
+app.listen(port, () => {
+  console.log(`Server listening on ${port}`);
 });
