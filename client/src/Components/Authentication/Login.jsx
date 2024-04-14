@@ -36,19 +36,18 @@ const Login = ({
           />
         </div>
 
-        <div className="button">
-          <Button
-            type="submit"
-            disabled={
-              !formData.email ||
-              !formData.password ||
-              Object.keys(errors).length > 0
-            }
-            loading={loading}
-            text="Log In"
-            onClick={handleFormSubmit}
-          />
-        </div>
+        <Button
+          type="submit"
+          disabled={
+            !formData.email ||
+            !formData.password ||
+            Object.keys(errors).length > 0
+          }
+          loading={loading}
+          loadingText="Logging in..."
+          text="Log In"
+          onClick={handleFormSubmit}
+        />
       </form>
       <span className="term-conditions">
         This site is protected by reCAPTCHA and the Google{" "}

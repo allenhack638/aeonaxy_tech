@@ -1,3 +1,4 @@
+import "./ChooseImage.css";
 import React, { useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,7 +9,6 @@ import {
 import { useCookies } from "react-cookie";
 
 const MAX_FILE_SIZE_MB = 5;
-import "./ChooseImage.css";
 
 const ChooseImage = ({
   image,
@@ -63,11 +63,11 @@ const ChooseImage = ({
   };
 
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div">
+          <div className="inner-div">
             <p>Welcome! Lets create your profile.</p>
             <span className="latter-message">
               Let other get to know better! You can do this later

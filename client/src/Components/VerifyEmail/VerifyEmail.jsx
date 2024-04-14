@@ -8,11 +8,11 @@ const VerifyEmail = ({ formData }) => {
     document.title = "Verify Email";
   }, []);
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div select-interest">
+          <div className="inner-div select-interest">
             <p>Please verify your email...</p>
 
             <div>

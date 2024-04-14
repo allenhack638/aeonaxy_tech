@@ -9,14 +9,14 @@ const UnauthorisedUser = () => {
   }, []);
 
   const handleReload = () => {
-    window.location.reload();
+    window.location.href = "/";
   };
 
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p className="logo">dribbble</p>
-        <div className="chooseimage-div unauth">
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
+        <div className="inner-div unauth">
           <div className="unauth-header">
             <FontAwesomeIcon
               icon={faTriangleExclamation}
@@ -26,9 +26,9 @@ const UnauthorisedUser = () => {
             <h2>Unauthorized Access</h2>
           </div>
 
-          <p>You are not authorized to access this page.</p>
+          <span>You are not authorized to access this page.</span>
           <div className="button verify">
-            <button onClick={handleReload}>Reload Page</button>
+            <button onClick={handleReload}>Go to Home</button>
           </div>
         </div>
       </div>

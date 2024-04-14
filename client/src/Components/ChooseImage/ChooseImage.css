@@ -1,42 +1,9 @@
-.chooseimage-container {
-  width: 100%;
-  height: 100%;
-  padding: 0rem 3rem;
-  box-sizing: border-box;
-}
-.chooseimage-outer p {
-  font-size: 30px;
-  width: 100%;
-}
-.chooseimage-outer > div {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-.chooseimage-div {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.chooseimage-div > p {
-  font-size: 35px;
-  margin: 0;
-  font-weight: bolder;
-  width: 100%;
-}
-.chooseimage-div > span {
-  color: gray;
-}
-
 .add-avatar-div {
   margin-top: 20px;
   font-weight: bolder;
-  /* outline: 1px solid black; */
   display: flex;
   gap: 20px;
   flex-direction: column;
-  /* height: 500px; */
 }
 .add-avatar-div > span,
 .add-location-div > span {
@@ -110,7 +77,6 @@
 }
 
 .add-location-div input:focus {
-  /* border: none; */
   border: 1px solid #888;
 }
 .add-location-div input::placeholder {
@@ -133,38 +99,7 @@
   border: none;
 }
 
-@media only screen and (max-width: 1300px) {
-  .chooseimage-div {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .chooseimage-container {
-    padding: 0rem 2rem;
-  }
-  .chooseimage-div {
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .chooseimage-div {
-    width: 70%;
-  }
-}
 @media only screen and (max-width: 850px) {
-  .chooseimage-div {
-    width: 80%;
-  }
-  .chooseimage-container {
-    padding: 0rem 1rem;
-  }
-  .chooseimage-div > p {
-    font-size: 25px;
-  }
-  .chooseimage-div span {
-    font-size: 14px;
-  }
   .choose-photo-div {
     gap: 40px;
   }
@@ -186,18 +121,6 @@
   }
 }
 @media only screen and (max-width: 550px) {
-  .chooseimage-div {
-    width: 100%;
-  }
-  .chooseimage-container {
-    padding: 0rem 1rem;
-  }
-  .chooseimage-div > p {
-    font-size: 20px;
-  }
-  .chooseimage-div span {
-    font-size: 12px;
-  }
   .choose-photo-div {
     gap: 20px;
   }

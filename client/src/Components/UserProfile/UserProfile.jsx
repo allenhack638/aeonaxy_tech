@@ -10,11 +10,11 @@ const UserProfile = ({ userData }) => {
   }, []);
   const { username, name, imageUrl, location, created_at } = userData;
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div select-interest">
+          <div className="inner-div select-interest">
             <p>Welcome! {name}</p>
             <div>
               <div className="user-profile-photo">

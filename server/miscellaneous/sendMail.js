@@ -1,7 +1,8 @@
+// miscellaneous/sendEmail.js
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const sendVerificationEmail = async (htmlTemp) => {
+exports.sendEmail = async (htmlTemp) => {
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -17,5 +18,3 @@ const sendVerificationEmail = async (htmlTemp) => {
     throw new Error("Failed to send verification email");
   }
 };
-
-module.exports = sendVerificationEmail;

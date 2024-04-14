@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
-import { API_URL } from "../../utils";
+import { API_URL, DEV_MODE, API_URL_DEV_MODE } from "../../utils";
 import toast from "react-hot-toast";
 import "./PromptVerify.css";
 
@@ -9,6 +9,7 @@ const PromptVerify = ({ userData, handleComponentChange, setUserData }) => {
   const [cookies] = useCookies(["token"]);
   const { otpCount, email } = userData;
   const [loading, setLoading] = useState(false);
+  const url = DEV_MODE ? API_URL_DEV_MODE : API_URL;
 
   useEffect(() => {
     document.title = "Verify Account";
@@ -23,7 +24,7 @@ const PromptVerify = ({ userData, handleComponentChange, setUserData }) => {
       if (!cookies.token || otpCount === 0) {
         return handleComponentChange("unauth");
       }
-      const resp = await axios.get(`${API_URL}/api/send-mail`, {
+      const resp = await axios.get(`${url}/api/send-mail`, {
         headers: {
           Authorization: `Bearer ${cookies.token}`,
         },
@@ -57,17 +58,20 @@ const PromptVerify = ({ userData, handleComponentChange, setUserData }) => {
   };
 
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div verify-div">
-            <p>Please verify your email </p>
-            <span>{email || "NA"}</span>
-
+          <div className="inner-div verify-div">
+            <p>Send Verification Email</p>
+            <span className="email-id">{email || "NA"}</span>
+            <span>
+              We will send a verification email to your address. Please check
+              your inbox and click the link to verify your account.
+            </span>
             <div className="button verify">
               <button disabled={loading} onClick={handleVerify}>
-                <span>{loading ? "Verifing..." : "Verify"}</span>
+                <span>{loading ? "Sending..." : "Send Mail"}</span>
               </button>
             </div>
           </div>

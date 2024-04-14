@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { API_URL } from "../../utils";
+import { API_URL, DEV_MODE, API_URL_DEV_MODE } from "../../utils";
 import axios from "axios";
 import toast from "react-hot-toast";
 import UnauthorisedUser from "../Pages/UnauthorisedUser";
@@ -14,12 +14,13 @@ const VerifyPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const url = DEV_MODE ? API_URL_DEV_MODE : API_URL;
 
   useEffect(() => {
     document.title = "Verify Account";
     const verifyToken = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/verify`, {
+        const response = await axios.get(`${url}/api/verify`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

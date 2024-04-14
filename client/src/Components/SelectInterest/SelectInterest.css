@@ -41,7 +41,7 @@
   border: none;
 }
 .finish {
-  margin-top: 30px;
+  margin: 20px 0;
 }
 .selectable-card img {
   width: 100%;
@@ -68,9 +68,9 @@
   .select-interest-div {
     margin: 25px 0;
   }
-  .finish {
+  /* .finish {
     margin-top: 20px;
-  }
+  } */
 }
 @media only screen and (max-width: 550px) {
   .select-interest-div {

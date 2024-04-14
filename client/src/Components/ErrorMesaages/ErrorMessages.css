@@ -1,0 +1,15 @@
+.error-messages {
+  /* height: 10px; */
+  display: flex;
+  /* outline: 1px solid black; */
+  align-items: center;
+  gap: 5px;
+}
+
+.error-messages p {
+  margin: 0;
+  color: red;
+  content: "\u2022";
+  margin-right: 5px;
+  font-size: 13px;
+}

@@ -1,4 +1,5 @@
 const postgres = require("postgres");
+require("dotenv").config();
 
 let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
@@ -36,6 +37,23 @@ const deleteAllTables = async () => {
     console.error("Error deleting tables:", error.message);
   } finally {
     await sql.end(); // Close the database connection
+  }
+};
+
+const deleteUserTable = async (tableName) => {
+  try {
+    const users = await sql`
+      DELETE FROM ${sql(tableName)}
+      RETURNING *
+    `;
+    console.log(`Deleted all users from table ${tableName}:`, users);
+    console.log(`All users deleted successfully from table ${tableName}.`);
+  } catch (error) {
+    console.log(error);
+    console.error(
+      `Error deleting users from table ${tableName}:`,
+      error.message
+    );
   }
 };
 
@@ -114,6 +132,7 @@ const deleteAndCreate = async () => {
 };
 
 (async () => {
+  // await deleteUserTable("users_table");
   // await deleteAndCreate();
   // await deleteUserByEmail("allenbenny41@gmail.com");
   // await deleteAllTables();

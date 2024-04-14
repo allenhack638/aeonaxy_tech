@@ -4,7 +4,7 @@ import SelectableCard from "./SelectableCard";
 import designerImage from "../../assets/designer.jpg";
 import hireDesigner from "../../assets/hire-designer.jpg";
 import designInspiration from "../../assets/design-inspiration.jpg";
-import { API_URL } from "../../utils";
+import { API_URL, DEV_MODE, API_URL_DEV_MODE } from "../../utils";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -19,6 +19,7 @@ const SelectInterest = ({
   const [cookies] = useCookies(["token"]);
   const [genImageUrl, setGenImageUrl] = useState(null);
   const [loading, setLoading] = useState(null);
+  const url = DEV_MODE ? API_URL_DEV_MODE : API_URL;
 
   useEffect(() => {
     document.title = "Choose an option";
@@ -61,7 +62,7 @@ const SelectInterest = ({
       }
       setLoading("Finishing up...");
       const resp = await axios.post(
-        `${API_URL}/api/addData`,
+        `${url}/api/addData`,
         {
           imageUrl: imageUrlToSend || genImageUrl,
           location: location,
@@ -103,11 +104,11 @@ const SelectInterest = ({
     handleComponentChange("chooseimage");
   };
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div select-interest">
+          <div className="inner-div select-interest">
             <p>What brings you to dribbble ?</p>
             <span className="latter-message">
               Select an option that describes you best. Don't worry, you can

@@ -2,11 +2,12 @@ import React from "react";
 
 const LoadingPage = () => {
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p className="logo">dribbble</p>
-        <div className="chooseimage-div unauth">
-          <p>Loading...</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
+        <div className="inner-div unauth">
+          <p>Verifying your request...</p>
+          <span>Please wait while we confirm your access.</span>
         </div>
       </div>
     </div>

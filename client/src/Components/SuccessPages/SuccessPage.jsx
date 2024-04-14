@@ -7,11 +7,11 @@ const SuccessPage = () => {
     document.title = "Success";
   }, []);
   return (
-    <div className="chooseimage-container">
-      <div className="chooseimage-outer">
-        <p>dribbble</p>
+    <div className="container">
+      <div className="outer-div">
+        <p className="dribbble-heading">dribbble</p>
         <div>
-          <div className="chooseimage-div success-page">
+          <div className="inner-div success-page">
             <VerifiedTick />
             <h2>Your Account Verified Successfully</h2>
             <span>

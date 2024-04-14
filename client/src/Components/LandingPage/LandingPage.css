@@ -1,13 +1,14 @@
 .landingpage {
   display: flex;
-  height: 100vh;
+  height: auto;
 }
 
 /* #CSS FOR LEFTSIDE */
 .leftside {
   position: relative;
   width: 35%;
-  height: 100%;
+  min-height: 100vh; /* Set minimum height to 100vh */
+  max-height: auto; /* Set maximum height to auto */
   background-image: url("../../assets/LandingPage.jpg");
   background-size: cover;
   background-position: center;
@@ -20,6 +21,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(233, 233, 233, 0.8);
+  /* background-color: red; */
 }
 .leftside .content {
   position: absolute;
@@ -39,8 +41,7 @@
   color: black;
 }
 .leftside .content p:nth-child(1) {
-  font-weight: bolder;
-  font-size: 25px;
+  font-size: 40px;
 }
 .leftside .content p:nth-child(2) {
   font-size: 30px;
@@ -78,113 +79,9 @@
   /* border: 2px solid black; */
 }
 
-.input-div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.name-username-div {
-  display: flex;
-  gap: 40px;
-}
-.name-username-div .input {
-  flex: 0.5;
-}
-
-.input {
-  /* flex: 1; */
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.input input:disabled {
-  background-color: rgba(211, 211, 211, 0.498);
-  border: 1px solid lightgray;
-  cursor: not-allowed;
-}
-
-.input div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.input input {
-  border-radius: 6px;
-  padding: 8px 10px;
-  font-size: 16px;
-  width: auto;
-  /* outline: none; */
-  border: 1px solid gray;
-}
-.labels {
-  font-weight: bold;
-}
-.accept-policy-div {
-  display: flex;
-  justify-content: center;
-  border: none;
-  gap: 2px;
-}
-.accept-policy-div div input {
-  outline: none;
-}
-.accept-policy-div span {
-  text-wrap: wrap;
-  font-size: 14px;
-}
-.button {
-  margin-top: 20px;
-}
-.button button {
-  height: 40px;
-  width: 200px;
-  border-radius: 8px;
-  /* font-size: 14px; */
-  border: none;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  align-items: center;
-  letter-spacing: 0.5px;
-  transition: background-color 0.3s ease;
-}
-.button button div {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-}
-
-.button button:disabled {
-  background-color: gray;
-  cursor: not-allowed;
-}
 .term-conditions {
   font-size: 12px;
   margin-top: -10px;
-}
-
-/* ERROR MESSAGES */
-
-.error-messages {
-  height: 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  /* justify-content: center; */
-  /* outline: 1px solid black; */
-}
-
-.error-messages p {
-  margin: 0;
-  color: red;
-  content: "\u2022";
-  margin-right: 5px;
-  font-size: 13px;
 }
 @media only screen and (max-width: 1400px) {
   .leftside .content {
@@ -193,10 +90,6 @@
     transform: translateX(-45%);
     padding: 20px 0;
     width: auto;
-  }
-  .name-username-div {
-    gap: 25px;
-    flex-direction: column;
   }
 }
 
@@ -222,11 +115,10 @@
 }
 @media only screen and (max-width: 1000px) {
   .leftside .content p:nth-child(1) {
-    font-weight: bolder;
-    font-size: 20px;
+    font-size: 30px;
   }
   .leftside .content p:nth-child(2) {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -248,35 +140,6 @@
     flex-direction: column;
     gap: 15px;
   }
-  .input-div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .input {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .input input:disabled {
-    background-color: rgba(211, 211, 211, 0.498);
-    border: 1px solid lightgray;
-    cursor: not-allowed;
-  }
-  .input div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .input input {
-    border-radius: 6px;
-    padding: 8px 10px;
-    font-size: 16px;
-    width: auto;
-    border: 1px solid gray;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -285,26 +148,6 @@
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-  }
-  .accept-policy-div {
-    gap: 8px;
-    padding: 0;
-  }
-  .accept-policy-div span {
-    text-wrap: wrap;
-    font-size: 12px;
-  }
-  .accept-policy-div div input {
-    outline: none;
-    height: 14px;
-    margin: 0;
-  }
-  .input-div {
-    gap: 15px;
-  }
-  .name-username-div {
-    display: flex;
     gap: 15px;
   }
 }

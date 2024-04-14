@@ -2,7 +2,12 @@ import "./LandingPage.css";
 import React, { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { API_URL, CRYPTO_JS_KEY } from "../../utils";
+import {
+  API_URL,
+  DEV_MODE,
+  CRYPTO_JS_KEY,
+  API_URL_DEV_MODE,
+} from "../../utils";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import ChooseImage from "../ChooseImage/ChooseImage";
@@ -25,6 +30,7 @@ const LandingPage = () => {
     email: "",
     password: "",
   });
+  const url = DEV_MODE ? API_URL_DEV_MODE : API_URL;
 
   const [image, setImage] = useState(null);
   const [location, setLocation] = useState("");
@@ -186,7 +192,7 @@ const LandingPage = () => {
           CRYPTO_JS_KEY
         ).toString();
         const response = await axios.post(
-          `${API_URL}/api/signup`,
+          `${url}/api/signup`,
           { email, username, password: encryptedPassword, name },
           axiosConfig
         );
@@ -249,7 +255,7 @@ const LandingPage = () => {
           CRYPTO_JS_KEY
         ).toString();
         const response = await axios.post(
-          `${API_URL}/api/login`,
+          `${url}/api/login`,
           { email, password: encryptedPassword },
           axiosConfig
         );

@@ -6,7 +6,6 @@ const JWT_KEY = process.env.JWT_SECRET_KEY;
 const authoriseUser = (req, res, next) => {
   const authorizationHeader = req.headers.authorization;
   let token;
-
   if (authorizationHeader && authorizationHeader.startsWith("Bearer ")) {
     token = authorizationHeader.split(" ")[1];
   }

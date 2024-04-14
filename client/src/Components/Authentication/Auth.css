@@ -4,8 +4,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  /* outline: 2px solid black; */
+  gap: 20px;
 }
 .signup-div form {
   display: flex;
@@ -19,6 +18,68 @@
   font-weight: 700;
 }
 
+.input-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.name-username-div {
+  display: flex;
+  gap: 30px;
+}
+.name-username-div .input {
+  flex: 0.5;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input input:disabled {
+  background-color: rgba(211, 211, 211, 0.498);
+  border: 1px solid lightgray;
+  cursor: not-allowed;
+}
+
+.input div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.input input {
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 16px;
+  width: auto;
+  /* outline: none; */
+  border: 1px solid gray;
+}
+
+.labels {
+  font-weight: bold;
+}
+
+.accept-policy-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 2px;
+}
+.accept-policy-div div input {
+  outline: none;
+}
+.accept-policy-div span {
+  text-wrap: wrap;
+  font-size: 12px;
+}
+@media only screen and (max-width: 1400px) {
+  .name-username-div {
+    flex-direction: column;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .signup-div {
     width: 60%;
@@ -28,13 +89,40 @@
   .signup-div {
     width: 70%;
   }
+  .labels {
+    font-size: 14px;
+  }
+  .input input {
+    font-size: 14px;
+  }
+  .input input:disabled {
+    font-size: 14px;
+  }
+  .input input:placeholder-shown {
+    font-size: 14px;
+  }
+  .signup-div > p {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 850px) {
   .signup-div {
     width: 100%;
     padding: 20px 0;
   }
-  .signup-div > p {
-    font-size: 20px;
+  .input-div {
+    width: 100%;
+  }
+  .input {
+    flex: 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .input-div {
+    gap: 15px;
+  }
+  .name-username-div {
+    display: flex;
+    gap: 15px;
   }
 }

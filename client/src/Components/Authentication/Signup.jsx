@@ -74,22 +74,21 @@ const Signup = ({
           </span>
         </div>
 
-        <div className="button">
-          <Button
-            type="submit"
-            disabled={
-              !agree ||
-              !formData.name ||
-              !formData.username ||
-              !formData.email ||
-              !formData.password ||
-              Object.keys(errors).length > 0
-            }
-            loading={loading}
-            text="Create Account"
-            onClick={handleFormSubmit}
-          />
-        </div>
+        <Button
+          type="submit"
+          disabled={
+            !agree ||
+            !formData.name ||
+            !formData.username ||
+            !formData.email ||
+            !formData.password ||
+            Object.keys(errors).length > 0
+          }
+          loading={loading}
+          loadingText="Signing up..."
+          text="Create Account"
+          onClick={handleFormSubmit}
+        />
       </form>
       <span className="term-conditions">
         This site is protected by reCAPTCHA and the Google{" "}

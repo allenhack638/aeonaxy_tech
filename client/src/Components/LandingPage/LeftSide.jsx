@@ -4,7 +4,7 @@ const LeftSide = () => {
   return (
     <div className="leftside">
       <div className="content">
-        <p>dribble</p>
+        <p>dribbble</p>
         <p>
           <span>Discover the world's top</span>
           <br />
